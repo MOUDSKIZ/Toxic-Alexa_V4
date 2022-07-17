@@ -21,7 +21,7 @@ const { JSDOM } = require('jsdom')
 const speed = require('performance-now')
 const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
-const Config = require('./turbo');
+const Config = require('./turbomods.js');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const Heroku = require('heroku-client');
@@ -6344,7 +6344,7 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./TurboMedia
            hydratedFooterText: `ꪶ𝗦𝗟𝚫𝗬𝚵𝗥-𝗠𝗗ꫂ⁩⁩⁩`,
            hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Creator 💣',
+                                    displayText: 'Creator ??',
                                     url: 'https://wa.me/916380260672'
                                 }
                             }, {
@@ -8339,7 +8339,7 @@ anu = `
 ┊🥵venus -photo-
 ┊🥵japanese -photo-
 ┊🥵hdr -photo-
-┊🥵viewfilter -photo-
+┊??viewfilter -photo-
 ┊🥵warmsunset -photo-
 └───〔 *_Toxic Alexa V4_* 〕
 
