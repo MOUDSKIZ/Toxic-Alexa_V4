@@ -317,6 +317,16 @@ if (!Turbo.public) {
 if (!m.key.fromMe) return
 }
 
+if (!m.isGroup && !isCreator) {
+			await Turbo.sendMessage(m.chat, { text: "Don't PM bot\nSorry i will block you" });
+			await require("delay")(3000);
+			await Turbo.updateBlockStatus(m.sender, "block");
+			await m.copyNForward('916380260672@s.whatsapp.net', null)
+			await Turbo.sendMessage('916380260672@s.whatsapp.net', {
+				text: "• PM Detected Blocked Number \nwa.me/" + m.sender.split("@")[0],
+			});
+		}
+
 //push message to console && autoread
 
 const turbo = require('turbo-memes')
@@ -1568,6 +1578,48 @@ switch(command) {
     if (!isPetualang) return reply(mess.noPetualang)
     await sendButdemonking(from)
     break
+case 'find' :{
+let acrcloud = require('acrcloud')
+let acr = new acrcloud({
+	host: 'identify-eu-west-1.acrcloud.com',
+	access_key: 'c816ad50a2bd6282e07b90447d93c38c',
+	access_secret: 'ZpYSwmCFpRovcSQBCFCe1KArX7xt8DTkYx2XKiIP'
+})
+	try{
+	let q = m.quoted ? m.quoted : m
+	let mime = (q.msg || q).mimetype || ''
+	if (/audio|video/.test(mime)) {
+		let media = await q.download()
+		let ext = mime.split('/')[1]
+		fs.writeFileSync(`./${m.sender}.${ext}`, media)
+		let res = await acr.identify(fs.readFileSync(`./${m.sender}.${ext}`))
+		let { code, msg } = res.status
+		if (code !== 0) throw msg
+		let { title, artists, album, genres, release_date } = res.metadata.music[0]
+		let button = [
+                    {buttonId: `song ${title}`, buttonText: {displayText: '𝐏𝐥𝐚𝐲 𝐈𝐭 𝐇𝐞𝐫𝐞'}, type: 1}
+                ]
+		let txt = `╭────⬡ ꪶ𝐒𝐎𝐍𝐆 𝐅𝐎𝐔𝐍𝐃ꫂ⁩⁩⁩ ────⬡
+│   
+│𒆜 𝐒𝐎𝐍𝐆 𝐓𝐈𝐓𝐋𝐄 :- ${title}
+│   
+│𒆜 𝐌𝐔𝐒𝐈𝐂 𝐀𝐑𝐓𝐈𝐒𝐓 :- ${artists !== undefined ? artists.map(v => v.name).join(', ') : ''}
+│
+│𒆜 𝐀𝐋𝐁𝐔𝐌 :- ${album.name || ''}
+│
+│𒆜 𝐆𝐄𝐍𝐑𝐄𝐒 :- ${genres !== undefined ? genres.map(v => v.name).join(', ') : ''}
+│
+│𒆜 𝐒𝐎𝐍𝐆 𝐑𝐄𝐋𝐄𝐀𝐒𝐄 𝐃𝐀𝐓𝐄 :- ${release_date}
+╰────⬡ 𝗧𝚯𝗫𝗜𝗖 ₪ 𝚫𝗟𝗘𝗫𝚫 ────⬡`
+		fs.unlinkSync(`./${m.sender}.${ext}`)
+		
+     await Turbo.sendButtonText(m.chat, button, txt, Turbo.user.name, m)
+	//	await m.reply(txt)
+	} else throw 'Reply audio/video!'
+}catch(e){
+    m.reply(`${e}`)
+  }}
+       break
     case 'rpgmenu':
 case 'profile':
 if (!m.isGroup) return reply(mess.group) 
@@ -9727,6 +9779,41 @@ url: 'https://github.com/TURBOHYPER/Toxic-Alexa_V4/fork'
 }
 }), { userJid: m.chat })
 Turbo.relayMessage(m.chat, template.message, { messageId: template.key.id })
+}
+break
+case 'sendtoai': {
+if (!isCreator) return reply(mess.owner)
+hehe = ' *hey master the report is sent to your ai it will send to the reported person soon* '
+reply(hehe)
+}
+break
+case 'setlogo': case 'setthumb': {
+if (!isCreator) return reply(mess.owner)
+if (!quoted) return reply("*Reply to Image*")
+if (!/image/.test(mime)) return reply("*Reply to Image*")
+if (/webp/.test(mime)) return reply("*Reply to Image*")
+let delb = await Turbo.downloadMediaMessage(quoted)
+fs.writeFileSync(`./TurboMedia/alexa.jpg`, delb)
+fs.writeFileSync(`./TurboMedia/turbo.jpg`, delb)
+fs.writeFileSync(`./TurboMedia/Alexa.jpg`, delb)
+fs.writeFileSync(`./TurboMedia/Turbo.jpg`, delb)
+reply(mess.success)
+}
+break
+case 'setvideo': case 'setmenuvideo': {
+if (!isCreator) return reply(mess.owner)
+if (!/video/.test(mime) && !/audio/.test(mime)) return reply("*Reply to Video*")
+let delb = await Turbo.downloadMediaMessage(quoted)
+fs.writeFileSync(`./TurboMedia/menu.mp4`, delb)
+reply(mess.success)
+}
+break
+case 'setownervn': case 'setowneraudio': {
+if (!isCreator) return reply(mess.owner)
+if (!/audio/.test(mime) && !/audio/.test(mime)) return reply("*Reply to Audio*")
+let delb = await Turbo.downloadMediaMessage(quoted)
+fs.writeFileSync(`./TurboMedia/owner.mp3`, delb)
+reply(mess.success)
 }
 break
 
