@@ -1,8 +1,8 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/TURBOHYPER/Toxic-Alexa_V4  /TURBOHYPER/Toxic-Alexa_V4
+RUN git clone https://github.com/TOXICTURBO/Toxic-Alexa_V4  /TOXICTURBO/Toxic-Alexa_V4
 
-WORKDIR /TURBOHYPER/Toxic-Alexa_V4
+WORKDIR /TOXICTURBO/Toxic-Alexa_V4
 
 ENV TZ=Africa/Harare
 
