@@ -1,25 +1,24 @@
 {
-  "name": "Toxic-Alexa_V4",
-  "version": "4.0.1",
-  "description": "Multi Device Wa Bot Created By Turbo Mods.",
+  "name": "Slayer-Md",
+  "version": "1.0.0",
+  "description": "Multi device wa bot created by Turbo.",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "supervisor -s index.js",
-    "cli": "node  --optimize_for_size --max_old_space_size=460 index.js"
+    "start": "node index.js"
   },
   "keywords": [
-    "termux",
+    "toxicalexa",
     "whatsapp",
-    "2021",
-    "wabase-md",
-    "base",
-    "baileys-md",
+    "turbomods",
+    "alexa",
+    "turbo",
+    "toxic",
     "bot",
     "bot-md",
     "multi-device"
   ],
-  "author": "Drips",
+  "author": "TURBOHYPER",
   "license": "MIT",
   "dependencies": {
     "@adiwajshing/baileys": "4.1.0",
@@ -90,8 +89,10 @@
     "toxicalexa-v4": "4.0.1"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "src": "src"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TURBOHYPER/Toxic-Alexa_V4.git"
