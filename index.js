@@ -169,8 +169,8 @@ body:"TURBO MODS",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: mhatadzenyu,
-mediaUrl:`https://instagram.com/toxic_turbo777``, 
-sourceUrl: `https://instagram.com/toxic_turbo777``,
+mediaUrl:`https://instagram.com/toxic_turbo777`, 
+sourceUrl: `https://instagram.com/toxic_turbo777`,
 }}
 }
 const turbobabe = fs.readFileSync('./TurboMedia/leave.mp3')
