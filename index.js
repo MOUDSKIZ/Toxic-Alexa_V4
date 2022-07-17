@@ -11,7 +11,6 @@ const  { Boom } = require('@hapi/boom')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
-const TurboMods = require('turbo-mods')
 global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
@@ -34,18 +33,18 @@ say('Toxic-Alexa\nV4', {
     align: 'center',
     gradient: ['red', 'green']
   })
-TurboMods.hr();
+Turbo.hr();
 console.log(color(''), color('THANKS FOR CHOOSING TOXIC ALEXA BOT', 'green'))
 console.log(color(''), color('SCRIPT BY TURBO MODS', 'red'))
 console.log(color( ''), color('https://wa.me/916380260672','cyan'))
-TurboMods.hr();
-TurboMods.banner(`TURBO MODS IS THE OWNER OF TOXIC ALEXA V4`)
-TurboMods.ok('WELCOME TO TOXIC ALEXA V4')
-TurboMods.done('I WROTE THIS SCRIPT BY MYSELF')
-TurboMods.info('YOU WANNA CONTRUBUTE FEEL FREE TO CONTACT ME, BEING FRIENDLY IS MY LANGUAGE')
-TurboMods.error('')
-TurboMods.time('')
-TurboMods.hr();
+Turbo.hr();
+Turbo.banner(`TURBO MODS IS THE OWNER OF TOXIC ALEXA V4`)
+Turbo.ok('WELCOME TO TOXIC ALEXA V4')
+Turbo.done('I WROTE THIS SCRIPT BY MYSELF')
+Turbo.info('YOU WANNA CONTRUBUTE FEEL FREE TO CONTACT ME, BEING FRIENDLY IS MY LANGUAGE')
+Turbo.error('')
+Turbo.time('')
+Turbo.hr();
 
 async function startTurbo() {
     const Turbo = TurboConnect({
@@ -170,8 +169,8 @@ body:"TURBO MODS",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: mhatadzenyu,
-mediaUrl:`https://instagram.com/toxic_turbo777`, 
-sourceUrl: `https://instagram.com/toxic_turbo777`,
+mediaUrl:`https://instagram.com/toxic_turbo777``, 
+sourceUrl: `https://instagram.com/toxic_turbo777``,
 }}
 }
 const turbobabe = fs.readFileSync('./TurboMedia/leave.mp3')

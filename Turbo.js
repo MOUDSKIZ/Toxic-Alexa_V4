@@ -35,7 +35,7 @@ const { mediafireDl } = require('./lib/mediafire.js')
 const { lirikLagu } = require('./lib/lirik.js')
 const { fromBuffer } = require('file-type')
 const mel = require('kitsune-api');
-let { msgFilter } = require('./TurboMedia/TOXICALEXAii.js')
+let { msgFilter } = require('./TurboMedia/turboi.js')
 const { Boom } = require("@hapi/boom")
 const ffmpeg = require('fluent-ffmpeg')
 const { checkPetualangUser, addInventori, addBesi, sellBesi, getBesi, addDm, sellDm, getDm, addEmas, sellEmas, getEmas, addFish, sellFish, getFish } = require('./tez.js')
@@ -6169,7 +6169,7 @@ if (!text) return reply('Give me a song name')
 const { name, artist, album, genre, price, url, release_date } = await fetchJson('https://api.popcat.xyz/itunes?q=${text}')
 anu = `╭══〘 ᏆͲႮΝᎬՏ ᎠᎬͲᎪᏆᏞՏ 〙══⊷❍
 ┃✩╭─────────────────
-┃✩│𝐍𝐀𝐌𝐄: ${name}
+┃✩│𝐍??𝐌𝐄: ${name}
 ┃✩│𝐀𝐑𝐓𝐈𝐒𝐓: ${artist}
 ┃✩│𝐀𝐋𝐁𝐔𝐌: ${album}
 ┃✩│𝐆𝐄𝐍𝐑𝐄: ${genre}
