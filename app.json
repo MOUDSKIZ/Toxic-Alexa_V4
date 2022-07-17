@@ -1,0 +1,36 @@
+{
+  "name": "Toxic-Alexa_V4",
+  "description": "Whatsapp Md Bot Build With Nodejs",
+  "repository": "https://github.com/TURBOHYPER/Toxic-Alexa_V4",
+  "logo": "",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "toxic alexa", "multi device"],
+  "stack": "container",
+  "addons": [{
+  "plan": "heroku-postgresql"
+    }],
+    "env": {
+      "HEROKU_APP_NAME": {
+        "description": "Heroku app name, same as above entered",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "Heroku account api key, https://dashboard.heroku.com/account",
+        "required": true
+      }
+    },
+  "buildpacks": [
+              {
+                
+                "url": "heroku-community/apt"
+              },
+              {
+                "url": "heroku/nodejs"
+              },
+              {
+                "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+              },
+              {
+                "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+              }
+            ]
+          }   
