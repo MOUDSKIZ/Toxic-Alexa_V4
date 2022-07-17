@@ -60,7 +60,7 @@ global.mess = {
     bot: 'Tʜɪs Fᴇᴀᴛᴜʀᴇ Iɴ Oɴʟʏ Fᴏʀ Tʜᴇ Bᴏᴛ Nᴜᴍʙᴇʀ',
     wait: 'Pʟᴇᴀsᴇ Wᴀɪᴛ A Mɪɴᴜᴛᴇ...',
     endLimit: '*Yᴏᴜʀ Dᴀɪʟʏ Lɪᴍɪᴛ Hᴀs Exᴘɪʀᴇᴅ, Tʜᴇ Lɪᴍɪᴛ Wɪʟʟ Bᴇ Rᴇsᴇᴛ Eᴠᴇʀʏ 12 Hᴏᴜʀs',
-    noPetualang: 'Yᴏᴜ Aʀᴇ Nᴏᴛ Iɴ Rᴘɢ Dᴀᴛᴀʙᴀsᴇ Tʏᴘᴇ *#joinrpg* _Uʀ Nᴀᴍᴇ_
+    noPetualang: 'Yᴏᴜ Aʀᴇ Nᴏᴛ Iɴ Rᴘɢ Dᴀᴛᴀʙᴀsᴇ Tʏᴘᴇ *#joinrpg* _Uʀ Nᴀᴍᴇ_',
 }
 global.limitawal = {
     premium: "Infinity", //premium user limit
