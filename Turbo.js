@@ -150,10 +150,10 @@ return dDisplay + hDisplay + mDisplay + sDisplay;
 
 
 const reply = (teks) => {
-    Turbo.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "Toxic Alexa V4",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "Turbo Mods", thumbnail: fs.readFileSync('./turbo.jpg'),sourceUrl: ("https://youtu.be/n2bvbnfd3Fg")}}})
+    Turbo.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "Toxic Alexa V4",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "ғᴏʟʟᴏᴡ ᴍʏ ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟ", thumbnail: fs.readFileSync('./turbo.jpg'),sourceUrl: ("https://github.com/TURBOHYPER/Toxic-Alexa_V4")}}})
 }
 const replay = (teks) => {
-    Turbo.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "Toxic Alexa V4",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "Turbo Mods", thumbnail: fs.readFileSync('./turbo.jpg'),sourceUrl: ("https://youtu.be/n2bvbnfd3Fg")}}})
+    Turbo.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "Toxic Alexa V4",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "ғᴏʟʟᴏᴡ ᴍʏ ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟ", thumbnail: fs.readFileSync('./turbo.jpg'),sourceUrl: ("https://github.com/TURBOHYPER/Toxic-Alexa_V4")}}})
 }
 
 const Turbo =  {
@@ -6169,7 +6169,7 @@ if (!text) return reply('Give me a song name')
 const { name, artist, album, genre, price, url, release_date } = await fetchJson('https://api.popcat.xyz/itunes?q=${text}')
 anu = `╭══〘 ᏆͲႮΝᎬՏ ᎠᎬͲᎪᏆᏞՏ 〙══⊷❍
 ┃✩╭─────────────────
-┃✩│𝐍??𝐌𝐄: ${name}
+┃✩│𝐍𝐀𝐌𝐄: ${name}
 ┃✩│𝐀𝐑𝐓𝐈𝐒𝐓: ${artist}
 ┃✩│𝐀𝐋𝐁𝐔𝐌: ${album}
 ┃✩│𝐆𝐄𝐍𝐑𝐄: ${genre}
