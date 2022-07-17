@@ -1,7 +1,7 @@
 {
-  "name": "zimbot-v4",
+  "name": "Toxic-Alexa_V4",
   "version": "4.0.1",
-  "description": "Multi device wa bot created by Zim Bot Inc.",
+  "description": "Multi Device Wa Bot Created By Turbo Mods.",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -87,17 +87,17 @@
     "xfarr-api": "^2.0.0",
     "yargs": "^17.2.1",
     "yt-search": "^2.10.3",
-    "zimbot-v4": "4.0.1"
+    "toxicalexa-v4": "4.0.1"
   },
   "directories": {
     "lib": "lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zim-bot/zimbot-v4.git"
+    "url": "git+https://github.com/TURBOHYPER/Toxic-Alexa_V4.git"
   },
   "bugs": {
-    "url": "https://github.com/zim-bot/zimbot-v4/issues"
+    "url": "https://github.com/TURBOHYPER/Toxic-Alexa_V4/issues"
   },
-  "homepage": "https://github.com/zim-bot/zimbot-v4#readme"
+  "homepage": "https://github.com/TURBOHYPER/Toxic-Alexa_V4#readme"
 }
